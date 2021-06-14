@@ -21,28 +21,33 @@ function playerSelection() {
   let jogadaplayer = prompt('ROCK, PAPER OR SCISSORS')
   return capitalize(jogadaplayer)
 }
-
+let ponto = 0
+let cpuponto = 0
 function playRound() {
   let cpu = computerPlays()
   let player = playerSelection()
+
   console.log(cpu)
   if (cpu == player) {
     return 'DRAW'
-  } else if (cpu == 'Rock' && player == 'Paper') {
-    return 'VITORIA'
-  } else if (cpu == 'Paper' && player == 'Scissors') {
-    return 'VITORIA'
-  } else if (cpu == 'Scissors' && player == 'Rock') {
+  } else if (
+    (cpu == 'Rock' && player == 'Paper') ||
+    (cpu == 'Paper' && player == 'Scissors') ||
+    (cpu == 'Scissors' && player == 'Rock')
+  ) {
+    ponto++
     return 'VITORIA'
   } else {
+    cpuponto++
     return 'DERROTA'
   }
 }
-let i = 0
 
 function game() {
-  do {
-    i++
+  while (ponto < 3 && cpuponto < 3) {
+    console.table({ ponto, cpuponto })
     console.log(playRound())
-  } while (i < 5)
+  }
 }
+
+game()
