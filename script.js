@@ -17,9 +17,19 @@ function reset() {
   cpuPonto = 0
   placar.textContent = 0
   placarCpu.textContent = 0
-  return 'reset'
 }
 
+function game() {
+  console.log(playRound())
+  console.table({ ponto, cpuPonto })
+  if (ponto >= 3) {
+    resultado.textContent = 'YOU WON'
+    reset()
+  } else if (cpuPonto >= 3) {
+    resultado.textContent = 'CPU WON'
+    reset()
+  }
+}
 function computerPlays() {
   let idJogada = getRandom()
   let cpuJogada
@@ -66,36 +76,8 @@ tesoura.addEventListener('click', function () {
   jogadaPlayer = 'Scissors'
 })
 
-pedra.addEventListener('click', function () {
-  console.log(playRound())
-  console.table({ ponto, cpuPonto })
-  if (ponto >= 3) {
-    resultado.textContent = 'YOU WON'
-    reset()
-  } else if (cpuPonto >= 3) {
-    resultado.textContent = 'CPU WON'
-    reset()
-  }
-})
-papel.addEventListener('click', function () {
-  console.log(playRound())
-  console.table({ ponto, cpuPonto })
-  if (ponto >= 3) {
-    resultado.textContent = 'YOU WON'
-    reset()
-  } else if (cpuPonto >= 3) {
-    resultado.textContent = 'CPU WON'
-    reset()
-  }
-})
-tesoura.addEventListener('click', function () {
-  console.log(playRound())
-  console.table({ ponto, cpuPonto })
-  if (ponto >= 3) {
-    resultado.textContent = 'YOU WON'
-    reset()
-  } else if (cpuPonto >= 3) {
-    resultado.textContent = 'CPU WON'
-    reset()
-  }
-})
+pedra.addEventListener('click', game)
+
+papel.addEventListener('click', game)
+
+tesoura.addEventListener('click', game)

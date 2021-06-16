@@ -36,6 +36,10 @@ button:focus {
   height: 270px;
 }
 .placarInfo {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: auto;
 }
 #placarPlayer {
   font-size: 130px;
@@ -44,15 +48,7 @@ button:focus {
 #placarCpu {
   font-size: 130px;
 }
-#tesoura {
-}
-#user {
-  /* margin-right: 100px; */
-}
-#cpu {
-  /* margin-left: 100px; */
-}
+
 #placaratt {
   text-align: center;
-  margin: 63px;
 }
