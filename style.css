@@ -1,0 +1,43 @@
+body {
+  font-family: 'Staatliches', cursive;
+  background-color: rgb(129, 173, 224);
+}
+button {
+  font-size: 150px;
+  background: 0;
+  border: 0;
+}
+button:hover {
+  filter: drop-shadow(5px 1px 1px black);
+}
+button:focus {
+  text-shadow: 4px 4px 0px rgb(0, 0, 0);
+  border-radius: 50%;
+  border: 10px solid black;
+}
+.principal {
+  background-color: aliceblue;
+  width: 700px;
+  min-width: 500px;
+  height: 530px;
+  margin: auto;
+  border-radius: 20px;
+}
+.botoes {
+  text-align: center;
+}
+.placar {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 200px;
+}
+#placarPlayer {
+  font-size: 130px;
+  margin-right: 200px;
+}
+#placarCpu {
+  font-size: 130px;
+}
+#tesoura {
+}

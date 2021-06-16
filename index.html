@@ -2,16 +2,24 @@
 <html>
   <head>
     <title>PEDRA PAPEL TESOURA</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="principal">
-      <div class="placar"></div>
+      <div class="placar">
+        <span id="placarPlayer">0</span><span id="placarCpu">0</span>
+      </div>
       <div class="botoes">
         <button id="pedra">✊</button>
         <button id="papel">✋</button>
         <button id="tesoura">✌️</button>
-        <button id="escolha">🗣️</button>
       </div>
+      <div class="botoes"><button id="escolha">🗣️</button></div>
     </div>
     <script type="text/javascript" src="script.js"></script>
   </body>
