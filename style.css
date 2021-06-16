@@ -15,22 +15,27 @@ button:focus {
   border-radius: 50%;
   border: 10px solid black;
 }
+
 .principal {
   background-color: aliceblue;
   width: 700px;
   min-width: 500px;
-  height: 530px;
+  height: 640px;
   margin: auto;
   border-radius: 20px;
 }
 .botoes {
   text-align: center;
 }
+
 .placar {
   font-size: 30px;
   font-weight: bold;
   text-align: center;
   margin-top: 200px;
+  height: 270px;
+}
+.placarInfo {
 }
 #placarPlayer {
   font-size: 130px;
@@ -40,4 +45,14 @@ button:focus {
   font-size: 130px;
 }
 #tesoura {
+}
+#user {
+  /* margin-right: 100px; */
+}
+#cpu {
+  /* margin-left: 100px; */
+}
+#placaratt {
+  text-align: center;
+  margin: 63px;
 }
