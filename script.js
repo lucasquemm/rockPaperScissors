@@ -1,3 +1,11 @@
+let pedra = document.querySelector('#pedra')
+let papel = document.querySelector('#papel')
+let tesoura = document.querySelector('#tesoura')
+let jogadaplayer
+let escolha = document.querySelector('#escolha')
+let ponto = 0
+let cpuponto = 0
+
 function getRandom() {
   return Math.round(Math.random() * (3 - 1) + 1)
 }
@@ -14,19 +22,10 @@ function computerPlays() {
   }
   return cpujogada
 }
-let capitalize = (str) =>
-  str[0].toUpperCase() + str.slice(1, str.length).toLowerCase()
 
-function playerSelection() {
-  let jogadaplayer = prompt('ROCK, PAPER OR SCISSORS')
-  return capitalize(jogadaplayer)
-}
-let ponto = 0
-let cpuponto = 0
 function playRound() {
   let cpu = computerPlays()
-  let player = playerSelection()
-
+  let player = jogadaplayer
   console.log(cpu)
   if (cpu == player) {
     return 'DRAW'
@@ -42,12 +41,16 @@ function playRound() {
     return 'DERROTA'
   }
 }
-
-function game() {
-  while (ponto < 3 && cpuponto < 3) {
-    console.table({ ponto, cpuponto })
-    console.log(playRound())
-  }
-}
-
-game()
+pedra.addEventListener('click', function () {
+  jogadaplayer = 'Rock'
+})
+papel.addEventListener('click', function () {
+  jogadaplayer = 'Paper'
+})
+tesoura.addEventListener('click', function () {
+  jogadaplayer = 'Scissors'
+})
+escolha.addEventListener('click', function () {
+  console.log(playRound())
+  console.table({ ponto, cpuponto })
+})
